@@ -26,7 +26,6 @@ def Jouer_Rejouer():
     surface_dessin.create_line(0, 302, 300, 302, fill="green", width=5)
     surface_dessin.create_line(300, 0, 300, 300, fill="green", width=5)
     surface_dessin.create_line(3, 0, 3, 300, fill="green", width=5)
-
     """       Tout les clics        """
     toute_les_clics = ["clic1", "clic2", "clic3", "clic4",
                        "clic5", "clic6", "clic7", "clic8", "clic9"]
@@ -470,8 +469,11 @@ def ExitApp():
 
 
 def reset_compteur():
-    text.set("Compteur croix = 0")
-    text2.set("Compteur rond = 0")
+    global compteur, compteur2
+    compteur = 0
+    compteur2 = 0
+    text.set("Compteur croix = " + str(compteur))
+    text2.set("Compteur rond = " + str(compteur2))
 
 
 # Création de la fenêtre principale (main window)
