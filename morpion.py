@@ -469,6 +469,11 @@ def ExitApp():
         tk.messagebox.showinfo('Welcome back', 'Welcome back')
 
 
+def reset_compteur():
+    text.set("Compteur croix = 0")
+    text2.set("Compteur rond = 0")
+
+
 # Création de la fenêtre principale (main window)
 mon_app = tk.Tk()
 mon_app.title('Morpion')
@@ -487,17 +492,18 @@ surface_dessin.pack(padx=5, pady=5)
 global text
 text = tk.StringVar()
 text.set("Compteur croix = 0")
-label = tk.Label(mon_app, textvariable=text, fg='black',
+label = tk.Label(mon_app, textvariable=text, fg='blue',
                  bg='white', font=('Arial', 13))
-label.place(x=310, y=50)
+label.place(x=310, y=120)
+
 
 """Texte compteur de nombre de fois gagner pour les ronds"""
 global text2
 text2 = tk.StringVar()
 text2.set("Compteur rond = 0")
-label2 = tk.Label(mon_app, textvariable=text2, fg='black',
+label2 = tk.Label(mon_app, textvariable=text2, fg='red',
                   bg='white', font=('Arial', 13))
-label2.place(x=310, y=100)
+label2.place(x=310, y=170)
 
 
 """Texte pour croix message tour"""
@@ -507,6 +513,7 @@ text3.set("")
 label3 = tk.Label(mon_app, textvariable=text3, fg='blue',
                   bg='white', font=('Arial', 13))
 label3.place(x=85, y=320)
+
 
 """Texte pour ronds message tour"""
 text4 = tk.StringVar()
@@ -539,6 +546,10 @@ tk.Canvas.create_circle_arc = _create_circle_arc
 # Création d'un widget Button (bouton effacer)
 tk.Button(mon_app, text='Jouer / Rejouer', command=Jouer_Rejouer).pack(
     side=tk.LEFT, padx=10, pady=10)
+# Création d'un widget Button (bouton rest compteur)
+tk.Button(mon_app, text='Reset compteur', command=reset_compteur).pack(
+    side=tk.LEFT, padx=10, pady=10)
+# Création d'un widget Button (bouton Comment jouer ?)
 tk.Button(mon_app, text='Comment jouer ?', command=comment_jouer).pack(
     side=tk.LEFT, padx=10, pady=10)
 # Création d'un widget Button (bouton Quitter)
