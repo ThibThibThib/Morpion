@@ -8,7 +8,9 @@ player1 = 3
 player2 = 1
 compteur = 0
 compteur2 = 0
-# Constantes
+
+
+## ------- Constantes ------- ##
 LARGEUR = 450
 HAUTEUR = 360
 
@@ -16,6 +18,12 @@ HAUTEUR = 360
 def Jouer_Rejouer():
     """ Efface la zone graphique et reset case 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8, 9 ..... """
     surface_dessin.delete(tk.ALL)
+
+    """Set des textes"""
+    text.set("Compteur croix = " + str(compteur))
+    text2.set("Compteur rond = " + str(compteur2))
+    text3.set("")
+    text4.set("C'est aux ronds de jouer")
 
     """Dessine la grille du Morpion """
     surface_dessin.create_line(100, 300, 100, 0, fill="green", width=5)
@@ -46,9 +54,6 @@ def Jouer_Rejouer():
     player1 = 3
     player2 = 1
 
-    text3.set("")
-    text4.set("C'est aux ronds de jouer")
-
 
 ## -------Jeu-------##
 
@@ -76,7 +81,7 @@ def clic(event):
                 case1 = True
                 global label3
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case1 == True:
                 tk.messagebox.showinfo(
@@ -88,7 +93,7 @@ def clic(event):
                 player1 += 1
                 case1b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 200 and Y < 100:
         clic2 = True
         if player1 % 2 == 0:
@@ -104,7 +109,7 @@ def clic(event):
                 player1 += 1
                 case2 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case2 == True:
                 tk.messagebox.showinfo(
@@ -116,7 +121,7 @@ def clic(event):
                 player1 += 1
                 case2b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 300 and Y < 100:
         clic3 = True
         if player1 % 2 == 0:
@@ -132,7 +137,7 @@ def clic(event):
                 player1 += 1
                 case3 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case3 == True:
                 tk.messagebox.showinfo(
@@ -144,7 +149,7 @@ def clic(event):
                 player1 += 1
                 case3b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 100 and Y < 200:
         clic4 = True
         if player1 % 2 == 0:
@@ -160,7 +165,7 @@ def clic(event):
                 player1 += 1
                 case4 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case4 == True:
                 tk.messagebox.showinfo(
@@ -172,7 +177,7 @@ def clic(event):
                 player1 += 1
                 case4b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 200 and Y < 200:
         clic5 = True
         if player1 % 2 == 0:
@@ -188,7 +193,7 @@ def clic(event):
                 player1 += 1
                 case5 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case5 == True:
                 tk.messagebox.showinfo(
@@ -200,7 +205,7 @@ def clic(event):
                 player1 += 1
                 case5b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 300 and Y < 200:
         clic6 = True
         if player1 % 2 == 0:
@@ -216,7 +221,7 @@ def clic(event):
                 player1 += 1
                 case6 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case6 == True:
                 tk.messagebox.showinfo(
@@ -228,7 +233,7 @@ def clic(event):
                 player1 += 1
                 case6b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 100 and Y < 300:
         clic7 = True
         if player1 % 2 == 0:
@@ -244,7 +249,7 @@ def clic(event):
                 player1 += 1
                 case7 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case7 == True:
                 tk.messagebox.showinfo(
@@ -256,7 +261,7 @@ def clic(event):
                 player1 += 1
                 case7b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 200 and Y < 300:
         clic8 = True
         if player1 % 2 == 0:
@@ -272,7 +277,7 @@ def clic(event):
                 player1 += 1
                 case8 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case8 == True:
                 tk.messagebox.showinfo(
@@ -284,7 +289,7 @@ def clic(event):
                 player1 += 1
                 case8b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
     elif X < 300 and Y < 300:
         clic9 = True
         if player1 % 2 == 0:
@@ -300,7 +305,7 @@ def clic(event):
                 player1 += 1
                 case9 = True
                 text3.set("")
-                text4.set("C'est aux ronds de jouer")
+                text4.set(" C'est aux ronds de jouer")
         else:
             if case9 == True:
                 tk.messagebox.showinfo(
@@ -312,7 +317,9 @@ def clic(event):
                 player1 += 1
                 case9b = True
                 text4.set("")
-                text3.set("C'est aux croix de jouer")
+                text3.set(" C'est aux croix de jouer")
+
+    """Vérification des possibilités de gagner"""
 
     global compteur, compteur2
     if case1 == True and case2 == True and case3 == True:
@@ -450,6 +457,8 @@ def clic(event):
             title="égalité", message="Vous avez fait égalité")
         surface_dessin.delete(tk.ALL)
 
+## -------Commande pour savoir comment jouer------- ##
+
 
 def comment_jouer():
     webbrowser.open("http://multysite.fr/morpion/Jeu-du-morpion.pdf")
@@ -466,6 +475,8 @@ def ExitApp():
         mon_app.destroy()
     else:
         tk.messagebox.showinfo('Welcome back', 'Welcome back')
+
+## -------Commande pour reste le compteur------- ##
 
 
 def reset_compteur():
@@ -493,7 +504,7 @@ surface_dessin.pack(padx=5, pady=5)
 """Texte compteur de nombre de fois gagner pour les croix"""
 global text
 text = tk.StringVar()
-text.set("Compteur croix = 0")
+text.set("")
 label = tk.Label(mon_app, textvariable=text, fg='blue',
                  bg='white', font=('Arial', 13))
 label.place(x=310, y=120)
@@ -502,7 +513,7 @@ label.place(x=310, y=120)
 """Texte compteur de nombre de fois gagner pour les ronds"""
 global text2
 text2 = tk.StringVar()
-text2.set("Compteur rond = 0")
+text2.set("")
 label2 = tk.Label(mon_app, textvariable=text2, fg='red',
                   bg='white', font=('Arial', 13))
 label2.place(x=310, y=170)
@@ -526,8 +537,6 @@ label4.place(x=85, y=320)
 
 
 ## -------Création de cercle-------##
-
-
 def _create_circle(self, x, y, r, **kwargs):
     return self.create_oval(x-r, y-r, x+r, y+r, **kwargs)
 
