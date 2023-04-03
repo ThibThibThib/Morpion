@@ -8,7 +8,7 @@ player1 = 3
 player2 = 1
 compteur = 0
 compteur2 = 0
-
+compteur3 = 0
 
 ## ------- Constantes ------- ##
 LARGEUR = 450
@@ -24,6 +24,8 @@ def Jouer_Rejouer():
     text2.set("Compteur rond = " + str(compteur2))
     text3.set("")
     text4.set("C'est aux ronds de jouer")
+    text5.set("Égalité = " + str(compteur3))
+    text6.set("MORPION")
 
     """Dessine la grille du Morpion """
     surface_dessin.create_line(100, 300, 100, 0, fill="green", width=5)
@@ -32,8 +34,9 @@ def Jouer_Rejouer():
     surface_dessin.create_line(0, 200, 300, 200, fill="green", width=5)
     surface_dessin.create_line(0, 2, 300, 2, fill="green", width=5)
     surface_dessin.create_line(0, 302, 300, 302, fill="green", width=5)
-    surface_dessin.create_line(300, 0, 300, 300, fill="green", width=5)
+    surface_dessin.create_line(300, 0, 300, 305, fill="green", width=5)
     surface_dessin.create_line(3, 0, 3, 300, fill="green", width=5)
+
     """       Tout les clics        """
     toute_les_clics = ["clic1", "clic2", "clic3", "clic4",
                        "clic5", "clic6", "clic7", "clic8", "clic9"]
@@ -321,7 +324,7 @@ def clic(event):
 
     """Vérification des possibilités de gagner"""
 
-    global compteur, compteur2
+    global compteur, compteur2, compteur3
     if case1 == True and case2 == True and case3 == True:
         surface_dessin.create_line(0, 50, 300, 50, fill="blue", width=10)
         text3.set("")
@@ -453,8 +456,11 @@ def clic(event):
     elif clic1 == True and clic2 == True and clic3 == True and clic4 == True and clic5 == True and clic6 == True and clic7 == True and clic8 == True and clic9 == True:
         text3.set("")
         text4.set("")
+        compteur3 += 1
+        text5.set("Égalité = " + str(compteur3))
         tk.messagebox.showinfo(
             title="égalité", message="Vous avez fait égalité")
+
         surface_dessin.delete(tk.ALL)
 
 ## -------Commande pour savoir comment jouer------- ##
@@ -480,11 +486,13 @@ def ExitApp():
 
 
 def reset_compteur():
-    global compteur, compteur2
+    global compteur, compteur2, compteur3
     compteur = 0
     compteur2 = 0
+    compteur3 = 0
     text.set("Compteur croix = " + str(compteur))
     text2.set("Compteur rond = " + str(compteur2))
+    text5.set("Égalité = " + str(compteur3))
 
 
 # Création de la fenêtre principale (main window)
@@ -507,7 +515,7 @@ text = tk.StringVar()
 text.set("")
 label = tk.Label(mon_app, textvariable=text, fg='blue',
                  bg='white', font=('Arial', 13))
-label.place(x=310, y=120)
+label.place(x=310, y=100)
 
 
 """Texte compteur de nombre de fois gagner pour les ronds"""
@@ -516,7 +524,7 @@ text2 = tk.StringVar()
 text2.set("")
 label2 = tk.Label(mon_app, textvariable=text2, fg='red',
                   bg='white', font=('Arial', 13))
-label2.place(x=310, y=170)
+label2.place(x=310, y=145)
 
 
 """Texte pour croix message tour"""
@@ -525,7 +533,7 @@ text3 = tk.StringVar()
 text3.set("")
 label3 = tk.Label(mon_app, textvariable=text3, fg='blue',
                   bg='white', font=('Arial', 13))
-label3.place(x=85, y=320)
+label3.place(x=65, y=320)
 
 
 """Texte pour ronds message tour"""
@@ -533,10 +541,26 @@ text4 = tk.StringVar()
 text4.set("")
 label4 = tk.Label(mon_app, textvariable=text4, fg='red',
                   bg='white', font=('Arial', 13))
-label4.place(x=85, y=320)
+label4.place(x=65, y=320)
 
+"""Texte compteur de nombre de fois égalité"""
+text5 = tk.StringVar()
+text5.set("")
+label5 = tk.Label(mon_app, textvariable=text5, fg='Black',
+                  bg='white', font=('Arial', 13))
+label5.place(x=310, y=190)
+
+
+"""Titre"""
+text6 = tk.StringVar()
+text6.set("")
+label6 = tk.Label(mon_app, textvariable=text6, fg='Black',
+                  bg='white', font=('Arial', 15))
+label6.place(x=335, y=15)
 
 ## -------Création de cercle-------##
+
+
 def _create_circle(self, x, y, r, **kwargs):
     return self.create_oval(x-r, y-r, x+r, y+r, **kwargs)
 
