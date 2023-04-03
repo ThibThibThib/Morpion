@@ -9,8 +9,8 @@ player2 = 1
 compteur = 0
 compteur2 = 0
 # Constantes
-LARGEUR = 300
-HAUTEUR = 305
+LARGEUR = 450
+HAUTEUR = 360
 
 
 def Jouer_Rejouer():
@@ -43,6 +43,13 @@ def Jouer_Rejouer():
     for toute_les_cases in toute_les_cases:
         globals()[toute_les_cases] = False
 
+    global player1, player2
+    player1 = 3
+    player2 = 1
+
+    text3.set("")
+    text4.set("C'est aux ronds de jouer")
+
 
 ## -------Jeu-------##
 
@@ -68,6 +75,9 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case1 = True
+                global label3
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case1 == True:
                 tk.messagebox.showinfo(
@@ -78,6 +88,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case1b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 200 and Y < 100:
         clic2 = True
         if player1 % 2 == 0:
@@ -92,6 +104,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case2 = True
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case2 == True:
                 tk.messagebox.showinfo(
@@ -102,6 +116,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case2b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 300 and Y < 100:
         clic3 = True
         if player1 % 2 == 0:
@@ -116,6 +132,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case3 = True
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case3 == True:
                 tk.messagebox.showinfo(
@@ -126,6 +144,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case3b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 100 and Y < 200:
         clic4 = True
         if player1 % 2 == 0:
@@ -140,6 +160,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case4 = True
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case4 == True:
                 tk.messagebox.showinfo(
@@ -150,6 +172,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case4b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 200 and Y < 200:
         clic5 = True
         if player1 % 2 == 0:
@@ -164,6 +188,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case5 = True
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case5 == True:
                 tk.messagebox.showinfo(
@@ -174,6 +200,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case5b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 300 and Y < 200:
         clic6 = True
         if player1 % 2 == 0:
@@ -188,6 +216,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case6 = True
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case6 == True:
                 tk.messagebox.showinfo(
@@ -198,6 +228,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case6b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 100 and Y < 300:
         clic7 = True
         if player1 % 2 == 0:
@@ -212,6 +244,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case7 = True
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case7 == True:
                 tk.messagebox.showinfo(
@@ -222,6 +256,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case7b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 200 and Y < 300:
         clic8 = True
         if player1 % 2 == 0:
@@ -236,6 +272,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case8 = True
+                text3.set("")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case8 == True:
                 tk.messagebox.showinfo(
@@ -246,6 +284,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case8b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
     elif X < 300 and Y < 300:
         clic9 = True
         if player1 % 2 == 0:
@@ -260,6 +300,8 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case9 = True
+                text3.set("")
+                text4.set("C'est aux croix de jouer")
         else:
             if case9 == True:
                 tk.messagebox.showinfo(
@@ -270,109 +312,150 @@ def clic(event):
                 player2 += 1
                 player1 += 1
                 case9b = True
+                text4.set("")
+                text3.set("C'est aux croix de jouer")
 
     global compteur, compteur2
     if case1 == True and case2 == True and case3 == True:
         surface_dessin.create_line(0, 50, 300, 50, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case4 == True and case5 == True and case6 == True:
         surface_dessin.create_line(0, 150, 300, 150, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case7 == True and case8 == True and case9 == True:
         surface_dessin.create_line(0, 250, 300, 250, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case1 == True and case4 == True and case7 == True:
         surface_dessin.create_line(50, 0, 50, 300, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case2 == True and case5 == True and case8 == True:
         surface_dessin.create_line(150, 0, 150, 300, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case3 == True and case6 == True and case9 == True:
         surface_dessin.create_line(250, 0, 250, 300, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case1 == True and case5 == True and case9 == True:
         surface_dessin.create_line(0, 0, 300, 300, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case3 == True and case5 == True and case7 == True:
         surface_dessin.create_line(300, 0, 0, 300, fill="blue", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les croix ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur += 1
         text.set("Compteur croix = " + str(compteur))
     elif case1b == True and case2b == True and case3b == True:
         surface_dessin.create_line(0, 50, 300, 50, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagner")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif case4b == True and case5b == True and case6b == True:
         surface_dessin.create_line(0, 150, 300, 150, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagnier")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif case7b == True and case8b == True and case9b == True:
         surface_dessin.create_line(0, 250, 300, 250, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagnier")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif case1b == True and case4b == True and case7b == True:
         surface_dessin.create_line(50, 0, 50, 300, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagnier")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif case2b == True and case5b == True and case8b == True:
         surface_dessin.create_line(150, 0, 150, 300, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagnier")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif case3b == True and case6b == True and case9b == True:
         surface_dessin.create_line(250, 0, 250, 300, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagnier")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif case1b == True and case5b == True and case9b == True:
         surface_dessin.create_line(0, 0, 300, 300, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagnier")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif case3b == True and case5b == True and case7b == True:
         surface_dessin.create_line(300, 0, 0, 300, fill="red", width=10)
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(title="Bravo", message="Les ronds ont gagnier")
         surface_dessin.delete(tk.ALL)
         compteur2 += 1
         text2.set("Compteur rond = " + str(compteur2))
     elif clic1 == True and clic2 == True and clic3 == True and clic4 == True and clic5 == True and clic6 == True and clic7 == True and clic8 == True and clic9 == True:
+        text3.set("")
+        text4.set("")
         tk.messagebox.showinfo(
             title="égalité", message="Vous avez fait égalité")
         surface_dessin.delete(tk.ALL)
 
+
+def comment_jouer():
+    webbrowser.open("http://multysite.fr/morpion/Jeu-du-morpion.pdf")
+    tk.messagebox.showinfo(
+        title="Comment Jouez ?", message="Veuillez vous rendre sur le site ci-dessous si vous ne s'avez pas comment jouer et connaître les règles:            http://multysite.fr/morpion/Jeu-du-morpion.pdf")
 
 ## -------Commande pour quitter-------##
 
@@ -400,18 +483,38 @@ surface_dessin.pack(padx=5, pady=5)
 surface_dessin.bind('<Button-1>', clic)
 surface_dessin.pack(padx=5, pady=5)
 
-
+"""Texte compteur de nombre de fois gagner pour les croix"""
 global text
 text = tk.StringVar()
 text.set("Compteur croix = 0")
-label = tk.Label(mon_app, textvariable=text)
-label.pack(side="right")
+label = tk.Label(mon_app, textvariable=text, fg='black',
+                 bg='white', font=('Arial', 13))
+label.place(x=310, y=50)
 
+"""Texte compteur de nombre de fois gagner pour les ronds"""
 global text2
 text2 = tk.StringVar()
 text2.set("Compteur rond = 0")
-label2 = tk.Label(mon_app, textvariable=text2)
-label2.pack(side="right")
+label2 = tk.Label(mon_app, textvariable=text2, fg='black',
+                  bg='white', font=('Arial', 13))
+label2.place(x=310, y=100)
+
+
+"""Texte pour croix message tour"""
+global text3
+text3 = tk.StringVar()
+text3.set("")
+label3 = tk.Label(mon_app, textvariable=text3, fg='blue',
+                  bg='white', font=('Arial', 13))
+label3.place(x=85, y=320)
+
+"""Texte pour ronds message tour"""
+text4 = tk.StringVar()
+text4.set("")
+label4 = tk.Label(mon_app, textvariable=text4, fg='red',
+                  bg='white', font=('Arial', 13))
+label4.place(x=85, y=320)
+
 
 ## -------Création de cercle-------##
 
@@ -435,6 +538,8 @@ tk.Canvas.create_circle_arc = _create_circle_arc
 
 # Création d'un widget Button (bouton effacer)
 tk.Button(mon_app, text='Jouer / Rejouer', command=Jouer_Rejouer).pack(
+    side=tk.LEFT, padx=10, pady=10)
+tk.Button(mon_app, text='Comment jouer ?', command=comment_jouer).pack(
     side=tk.LEFT, padx=10, pady=10)
 # Création d'un widget Button (bouton Quitter)
 buttonEg = tk.Button(mon_app, text='Quitter', command=ExitApp).pack(
