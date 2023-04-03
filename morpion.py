@@ -301,7 +301,7 @@ def clic(event):
                 player1 += 1
                 case9 = True
                 text3.set("")
-                text4.set("C'est aux croix de jouer")
+                text4.set("C'est aux ronds de jouer")
         else:
             if case9 == True:
                 tk.messagebox.showinfo(
