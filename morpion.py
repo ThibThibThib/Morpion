@@ -606,13 +606,6 @@ label5 = tk.Label(mon_app, textvariable=text5, fg='Black',
 label5.place(x=310, y=190)
 
 
-text6 = tk.StringVar()
-text6.set("")
-label6 = tk.Label(mon_app, textvariable=text6, fg='Black',
-                  bg='white', font=('Arial', 13))
-label6.place(x=310, y=220)
-
-
 """Titre MORPION"""
 text6 = tk.StringVar()
 text6.set("")
