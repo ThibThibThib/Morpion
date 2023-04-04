@@ -76,6 +76,9 @@ def clic(event):
             if case1b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case1 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(8, 8, 95, 95, fill="blue", width=10)
                 surface_dessin.create_line(95, 8, 8, 95, fill="blue", width=10)
@@ -89,6 +92,9 @@ def clic(event):
             if case1 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case1b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     50, 50, 43,  outline="red", width=4)
@@ -103,6 +109,9 @@ def clic(event):
             if case2b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case2 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     108, 8, 195, 95, fill="blue", width=10)
@@ -117,6 +126,9 @@ def clic(event):
             if case2 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case2b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     150, 50, 43,  outline="red", width=4)
@@ -131,6 +143,9 @@ def clic(event):
             if case3b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case3 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     208, 8, 295, 95, fill="blue", width=10)
@@ -145,6 +160,9 @@ def clic(event):
             if case3 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case3b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     250, 50, 43,  outline="red", width=4)
@@ -159,6 +177,9 @@ def clic(event):
             if case4b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case4 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     8, 108, 95, 195, fill="blue", width=10)
@@ -173,6 +194,9 @@ def clic(event):
             if case4 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case4b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     50, 150, 43,  outline="red", width=4)
@@ -187,6 +211,9 @@ def clic(event):
             if case5b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case5 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     108, 108, 195, 195, fill="blue", width=10)
@@ -201,6 +228,9 @@ def clic(event):
             if case5 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case5b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     150, 150, 43,  outline="red", width=4)
@@ -215,6 +245,9 @@ def clic(event):
             if case6b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case6 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     208, 108, 295, 195, fill="blue", width=10)
@@ -229,6 +262,9 @@ def clic(event):
             if case6 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case6b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     250, 150, 43,  outline="red", width=4)
@@ -243,6 +279,9 @@ def clic(event):
             if case7b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case7 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     8, 208, 95, 295, fill="blue", width=10)
@@ -257,6 +296,9 @@ def clic(event):
             if case7 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case7b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     50, 250, 43,  outline="red", width=4)
@@ -271,6 +313,9 @@ def clic(event):
             if case8b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case8 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     108, 208, 195, 295, fill="blue", width=10)
@@ -285,6 +330,9 @@ def clic(event):
             if case8 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case8b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     150, 250, 43,  outline="red", width=4)
@@ -299,6 +347,9 @@ def clic(event):
             if case9b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
+            elif case9 == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_line(
                     208, 208, 295, 295, fill="blue", width=10)
@@ -313,6 +364,9 @@ def clic(event):
             if case9 == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les croix ont déjà jouer")
+            elif case9b == True:
+                tk.messagebox.showinfo(
+                    title="Impossible", message="Vous avez déjà jouer")
             else:
                 surface_dessin.create_circle(
                     250, 250, 43,  outline="red", width=4)
@@ -459,9 +513,10 @@ def clic(event):
         compteur3 += 1
         text5.set("Égalité = " + str(compteur3))
         tk.messagebox.showinfo(
-            title="égalité", message="Vous avez fait égalité")
+            title="Égalité", message="Vous avez fait égalité")
 
         surface_dessin.delete(tk.ALL)
+
 
 ## -------Commande pour savoir comment jouer------- ##
 
@@ -551,7 +606,14 @@ label5 = tk.Label(mon_app, textvariable=text5, fg='Black',
 label5.place(x=310, y=190)
 
 
-"""Titre"""
+text6 = tk.StringVar()
+text6.set("")
+label6 = tk.Label(mon_app, textvariable=text6, fg='Black',
+                  bg='white', font=('Arial', 13))
+label6.place(x=310, y=220)
+
+
+"""Titre MORPION"""
 text6 = tk.StringVar()
 text6.set("")
 label6 = tk.Label(mon_app, textvariable=text6, fg='Black',
