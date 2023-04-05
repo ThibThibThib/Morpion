@@ -4,8 +4,8 @@ import webbrowser
 
 
 ## -------Joueur-------##
-player1 = 3
-player2 = 1
+player1 = False
+player2 = True
 compteur = 0
 compteur2 = 0
 compteur3 = 0
@@ -54,8 +54,8 @@ def Jouer_Rejouer():
         globals()[toute_les_cases] = False
 
     global player1, player2
-    player1 = 3
-    player2 = 1
+    player1 = False
+    player2 = True
 
 
 ## -------Jeu-------##
@@ -72,7 +72,7 @@ def clic(event):
     # -------Création de rond et croix et quand les joueurs doivent jouer-------##
     if X < 100 and Y < 100:
         clic1 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case1b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -82,8 +82,8 @@ def clic(event):
             else:
                 surface_dessin.create_line(8, 8, 95, 95, fill="blue", width=10)
                 surface_dessin.create_line(95, 8, 8, 95, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case1 = True
                 global label3
                 text3.set("")
@@ -98,14 +98,15 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     50, 50, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case1b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
+
     elif X < 200 and Y < 100:
         clic2 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case2b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -117,8 +118,8 @@ def clic(event):
                     108, 8, 195, 95, fill="blue", width=10)
                 surface_dessin.create_line(
                     195, 8, 108, 95, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case2 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -132,14 +133,15 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     150, 50, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case2b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
+
     elif X < 300 and Y < 100:
         clic3 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case3b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -151,8 +153,8 @@ def clic(event):
                     208, 8, 295, 95, fill="blue", width=10)
                 surface_dessin.create_line(
                     295, 8, 208, 95, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case3 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -166,14 +168,15 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     250, 50, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case3b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
+
     elif X < 100 and Y < 200:
         clic4 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case4b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -185,8 +188,8 @@ def clic(event):
                     8, 108, 95, 195, fill="blue", width=10)
                 surface_dessin.create_line(
                     95, 108, 8, 195, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case4 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -200,14 +203,15 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     50, 150, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case4b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
+
     elif X < 200 and Y < 200:
         clic5 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case5b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -219,8 +223,8 @@ def clic(event):
                     108, 108, 195, 195, fill="blue", width=10)
                 surface_dessin.create_line(
                     195, 108, 108, 195, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case5 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -234,14 +238,14 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     150, 150, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
                 case5b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
+                player1 = True
+                player2 = False
     elif X < 300 and Y < 200:
         clic6 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case6b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -253,8 +257,8 @@ def clic(event):
                     208, 108, 295, 195, fill="blue", width=10)
                 surface_dessin.create_line(
                     295, 108, 208, 195, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case6 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -268,14 +272,14 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     250, 150, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case6b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
     elif X < 100 and Y < 300:
         clic7 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case7b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -287,8 +291,8 @@ def clic(event):
                     8, 208, 95, 295, fill="blue", width=10)
                 surface_dessin.create_line(
                     95, 208, 8, 295, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case7 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -302,14 +306,14 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     50, 250, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case7b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
     elif X < 200 and Y < 300:
         clic8 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case8b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -321,8 +325,8 @@ def clic(event):
                     108, 208, 195, 295, fill="blue", width=10)
                 surface_dessin.create_line(
                     195, 208, 108, 295, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case8 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -336,14 +340,14 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     150, 250, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case8b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
     elif X < 300 and Y < 300:
         clic9 = True
-        if player1 % 2 == 0:
+        if player1 == True:
             if case9b == True:
                 tk.messagebox.showinfo(
                     title="Impossible", message="Les ronds ont déjà jouer")
@@ -355,8 +359,8 @@ def clic(event):
                     208, 208, 295, 295, fill="blue", width=10)
                 surface_dessin.create_line(
                     295, 208, 208, 295, fill="blue", width=10)
-                player2 += 1
-                player1 += 1
+                player1 = False
+                player2 = True
                 case9 = True
                 text3.set("")
                 text4.set(" C'est aux ronds de jouer")
@@ -370,8 +374,8 @@ def clic(event):
             else:
                 surface_dessin.create_circle(
                     250, 250, 43,  outline="red", width=4)
-                player2 += 1
-                player1 += 1
+                player1 = True
+                player2 = False
                 case9b = True
                 text4.set("")
                 text3.set(" C'est aux croix de jouer")
